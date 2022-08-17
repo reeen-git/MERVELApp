@@ -18,6 +18,7 @@
 		4B34161428AD25BE000AA0D6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34161328AD25BE000AA0D6 /* Home.swift */; };
 		4B34161628AD2692000AA0D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34161528AD2692000AA0D6 /* HomeViewModel.swift */; };
 		4B34161828AD27E6000AA0D6 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34161728AD27E6000AA0D6 /* CharactersView.swift */; };
+		4BA4D80F28AD3302006AD53C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4D80E28AD3302006AD53C /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		4B34161328AD25BE000AA0D6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		4B34161528AD2692000AA0D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4B34161728AD27E6000AA0D6 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		4BA4D80E28AD3302006AD53C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		4B34161128AD25A5000AA0D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4BA4D80E28AD3302006AD53C /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				4B34160F28AD2534000AA0D6 /* Credentials.swift in Sources */,
 				4B3415E728AD2451000AA0D6 /* ContentView.swift in Sources */,
+				4BA4D80F28AD3302006AD53C /* Character.swift in Sources */,
 				4B34161828AD27E6000AA0D6 /* CharactersView.swift in Sources */,
 				4B34161428AD25BE000AA0D6 /* Home.swift in Sources */,
 				4B34161628AD2692000AA0D6 /* HomeViewModel.swift in Sources */,

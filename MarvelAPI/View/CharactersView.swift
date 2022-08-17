@@ -27,6 +27,21 @@ struct CharactersView: View {
                     .shadow(color: Color.black.opacity(0.06), radius: 5, x: -5, y: -5)
                 }
                 .padding()
+                if let characters = homeData.fetchedCharacters {
+                    if characters.isEmpty {
+                        Text("no result found")
+                            .padding(.top, 20)
+                    } else {
+                        ForEach(characters) { data in
+                            Text(data.name)
+                        }
+                    }
+                } else {
+                    if homeData.searchQuery != "" {
+                        ProgressView()
+                            .padding(.top, 20)
+                    }
+                }
             })
             .navigationTitle("Marvel")
         }

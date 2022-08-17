@@ -22,7 +22,7 @@ class HomeViewModel: ObservableObject {
             .debounce(for: 0.6, scheduler: RunLoop.main)
             .sink(receiveValue: { str in
                 if str == "" {
-                    
+                    self.fetchedCharacters = nil
                 } else {
                     self.searchCharacter()
                 }
@@ -32,7 +32,8 @@ class HomeViewModel: ObservableObject {
     func searchCharacter() {
         let ts = String(Date().timeIntervalSince1970)
         let hash = MD5(data: "\(ts)\(privateKey)\(publicKey)")
-        let url = "https://gateway.marvel.com:443/v1/public/characters?ts=\(ts)apikey=\(publicKey)&hash=\(hash)"
+        let originalQuery = searchQuery.replacingOccurrences(of: " ", with: "%20")
+        let url = "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=\(originalQuery)&ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
         
         let session = URLSession(configuration: .default)
         session.dataTask(with: URL(string: url)!) { data, _, err in
@@ -52,9 +53,10 @@ class HomeViewModel: ObservableObject {
                     }
                 }
             } catch {
-                
+                print(error.localizedDescription)
             }
         }
+        .resume()
     }
     
     func MD5(data: String) -> String {

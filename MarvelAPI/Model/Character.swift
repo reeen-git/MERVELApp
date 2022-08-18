@@ -19,6 +19,7 @@ struct Character: Identifiable, Codable {
     var id: Int
     var name: String
     var description: String
-    var thumbnail: [String : String]
+    var thumbnail: [String:String]
+    
     var urls: [[String : String]]
 }

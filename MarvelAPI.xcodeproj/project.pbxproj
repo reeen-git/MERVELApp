@@ -19,6 +19,7 @@
 		4B34161628AD2692000AA0D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34161528AD2692000AA0D6 /* HomeViewModel.swift */; };
 		4B34161828AD27E6000AA0D6 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34161728AD27E6000AA0D6 /* CharactersView.swift */; };
 		4BA4D80F28AD3302006AD53C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4D80E28AD3302006AD53C /* Character.swift */; };
+		4BE1E17428AE7BAC00F4A91C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4BE1E17328AE7BAC00F4A91C /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4B34161528AD2692000AA0D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4B34161728AD27E6000AA0D6 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		4BA4D80E28AD3302006AD53C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		4BE1E17528AE7E5C00F4A91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE1E17428AE7BAC00F4A91C /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 		4B3415E328AD2451000AA0D6 /* MarvelAPI */ = {
 			isa = PBXGroup;
 			children = (
+				4BE1E17528AE7E5C00F4A91C /* Info.plist */,
 				4B34161228AD25AA000AA0D6 /* ViewModel */,
 				4B34161128AD25A5000AA0D6 /* Model */,
 				4B34161028AD2597000AA0D6 /* View */,
@@ -182,6 +186,9 @@
 			dependencies = (
 			);
 			name = MarvelAPI;
+			packageProductDependencies = (
+				4BE1E17328AE7BAC00F4A91C /* SDWebImageSwiftUI */,
+			);
 			productName = MarvelAPI;
 			productReference = 4B3415E128AD2451000AA0D6 /* MarvelAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +261,10 @@
 				Base,
 			);
 			mainGroup = 4B3415D828AD2451000AA0D6;
+			packageReferences = (
+				4BE1E16F28AE7AA400F4A91C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				4BE1E17228AE7BAB00F4A91C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 4B3415E228AD2451000AA0D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -464,6 +475,7 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,6 +505,7 @@
 				DEVELOPMENT_TEAM = Y5DZ85S2CD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MarvelAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -627,6 +640,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BE1E16F28AE7AA400F4A91C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4BE1E17228AE7BAB00F4A91C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BE1E17328AE7BAC00F4A91C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BE1E17228AE7BAB00F4A91C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B3415D928AD2451000AA0D6 /* Project object */;
 }

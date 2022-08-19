@@ -20,6 +20,7 @@
 		4B34161828AD27E6000AA0D6 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B34161728AD27E6000AA0D6 /* CharactersView.swift */; };
 		4BA4D80F28AD3302006AD53C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA4D80E28AD3302006AD53C /* Character.swift */; };
 		4BE1E17428AE7BAC00F4A91C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4BE1E17328AE7BAC00F4A91C /* SDWebImageSwiftUI */; };
+		4BE1E17728AF83F900F4A91C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE1E17628AF83F900F4A91C /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		4B34161728AD27E6000AA0D6 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		4BA4D80E28AD3302006AD53C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		4BE1E17528AE7E5C00F4A91C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4BE1E17628AF83F900F4A91C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				4B34161328AD25BE000AA0D6 /* Home.swift */,
 				4B34161728AD27E6000AA0D6 /* CharactersView.swift */,
+				4BE1E17628AF83F900F4A91C /* WebView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			files = (
 				4B34160F28AD2534000AA0D6 /* Credentials.swift in Sources */,
 				4B3415E728AD2451000AA0D6 /* ContentView.swift in Sources */,
+				4BE1E17728AF83F900F4A91C /* WebView.swift in Sources */,
 				4BA4D80F28AD3302006AD53C /* Character.swift in Sources */,
 				4B34161828AD27E6000AA0D6 /* CharactersView.swift in Sources */,
 				4B34161428AD25BE000AA0D6 /* Home.swift in Sources */,

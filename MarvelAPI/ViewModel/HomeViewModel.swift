@@ -78,7 +78,7 @@ class HomeViewModel: ObservableObject {
                 //decoding API
                 let comics = try JSONDecoder().decode(APIComicResult.self, from: APIData)
                 DispatchQueue.main.async {
-                        self.fetchedComics = comics.data.results
+                    self.fetchedComics.append(contentsOf: comics.data.results)
                 }
             } catch {
                 print(error.localizedDescription)

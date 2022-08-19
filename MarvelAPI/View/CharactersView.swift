@@ -46,7 +46,7 @@ struct CharactersView: View {
                     }
                 }
             })
-            .navigationTitle("Marvel")
+            .navigationTitle("MERVEL's characters")
         }
     }
 }

@@ -51,13 +51,6 @@ struct CharactersView: View {
     }
 }
 
-
-struct CharactersView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
 struct CharacterRowView: View {
     var character: Character
     
@@ -112,5 +105,12 @@ struct CharacterRowView: View {
     func extractURLType(data: [String: String]) -> String {
         let type = data["type"] ?? ""
         return type.capitalized
+    }
+}
+
+
+struct CharactersView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }

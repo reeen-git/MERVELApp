@@ -12,7 +12,8 @@ import CryptoKit
 class HomeViewModel: ObservableObject {
     @Published var searchQuery = ""
     @Published var fetchedCharacters: [Character]? = nil
-    
+    @Published var fetchedComics: [Comic] = []
+    @Published var offset: Int = 0
     var searchCancellable: AnyCancellable? = nil
     
     //タイピングが終わると、textViewの文字が認識される
@@ -51,6 +52,33 @@ class HomeViewModel: ObservableObject {
                     if self.fetchedCharacters == nil {
                         self.fetchedCharacters = characters.data.results
                     }
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        .resume()
+    }
+    
+    func fetchComics() {
+        let ts = String(Date().timeIntervalSince1970)
+        let hash = MD5(data: "\(ts)\(privateKey)\(publicKey)")
+        let url = "https://gateway.marvel.com:443/v1/public/comics?limit=20&offset=\(offset)&ts=\(ts)&apikey=\(publicKey)&hash=\(hash)"
+        
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: URL(string: url)!) { data, _, err in
+            if let error = err {
+                print(error.localizedDescription)
+            }
+            guard let APIData = data else {
+                print("no data found")
+                return
+            }
+            do {
+                //decoding API
+                let comics = try JSONDecoder().decode(APIComicResult.self, from: APIData)
+                DispatchQueue.main.async {
+                        self.fetchedComics = comics.data.results
                 }
             } catch {
                 print(error.localizedDescription)
